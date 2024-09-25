@@ -1,5 +1,5 @@
 #
-# James
+# Monika
 # Print Hello Monika!
 #
 
@@ -9,4 +9,3 @@
 
 # 3. Output
 print('Hello Monika!')
-
