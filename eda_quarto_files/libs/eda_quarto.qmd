@@ -1,0 +1,51 @@
+---
+title: "Untitled"
+author: 'Monika'
+format: html
+---
+ 
+## Load Packages
+```{python}
+import pandas as pd 
+
+```
+# Load dataset from smoker.csv
+```{python}
+df = pd.read_csv('smoker.csv')
+```
+
+## check dimension of data set
+```{python}
+df.shape
+```
+## check detail of dataset (cols, rows, types,etc.)
+```{python}
+df.info()
+```
+
+## check first five rows
+```{python}
+df.head()
+```
+
+## check last five rows
+```{python}
+df.tail()
+```
+
+## Calculate sum of treatment column
+
+```{python}
+df.sum()
+```
+
+## create a descriptive stratistics 
+
+```{python}
+df.describe()
+```
+## count unique values in outcome 
+
+```{python}
+df.value_counts()
+```
