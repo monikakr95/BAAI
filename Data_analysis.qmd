@@ -4,7 +4,9 @@ Author : 'Monika Kristina'
 Institute : 'Tunghai University'
 number-sections: true
 toc: true
-format: html
+format: 
+  html: 
+    embed-resources: true
 ---
 
 ## Key Points
@@ -18,3 +20,145 @@ format: html
   - Decint outliers
 - Data Transformation
   - Encoding 
+
+## Load Dataset
+
+Load dataset from CSV file into 'df' using Pandas package
+
+```{python}
+import pandas as pd
+df = pd.read_csv('customer_data.csv')
+```
+
+
+Where is 'customer_data.csv' ?
+
+## Data Inspection
+
+- Structure
+  - Dimension of dataset
+  - Column data type
+- Value
+  - Missing Value
+  - Outliers
+
+### Dimension of dataset
+
+How many row and columns
+
+```{python}
+df.shape
+```
+
+### Column Data Type
+
+```{python}
+df.info()
+```
+
+## Check first few row
+
+```{python}
+df.head()
+```
+
+## Check last few row
+
+```{python}
+df.tail()
+```
+
+## Basic Stratistics
+
+```{python}
+df.describe()
+```
+
+## Round to 2 decimal point 
+
+```{python}
+df.describe().round(2)
+```
+
+## Dataset
+
+
+```{python}
+#| echo: false
+df
+```
+
+Any potential issue in this dataset ?
+
+## Visualization
+
+
+```{python}
+import matplotlib.pylab as plt
+df ['Age'].hist()
+plt.show()
+```
+
+## Correlation among columns
+
+
+```{python}
+import seaborn as sns
+sns.pairplot(df)
+df.plot.scatter(x = 'Age', y = 'Income')
+plt.show()
+```
+
+## Data Cleaning 
+ - Removing duplicates 
+```{python}
+df = df.drop_duplicates(subset='CustomerID')
+```
+
+```{python}
+#| echo: false
+df
+```
+
+ - Fixing incorrect values
+
+ ```{python}
+ ```
+
+```{python}
+ import numpy as np
+ df.loc[(df['Age'] < 18) | (df['Age'] > 65), 'Age'] = np.nan
+```
+
+## Dealing with Missing Data
+ - Imputing
+ ```python
+ df.loc[df['Age'].isna(), 'Age'] = df['Age'].median()
+df.loc[df['Income'].isna(), 'Income'] = df['Income'].mean()
+ ```
+
+  - Removing 
+
+```{python}
+df = df.dropna(subset=['Gender'])
+```
+
+## Dealing with Missing Data
+
+```{python}
+Q1 = df['Income'].quantile(0.25)
+Q3 = df['Income'].quantile(0.75)
+IQR = Q3 - Q1
+lower_bound = Q1 - 1.5 * IQR
+upper_bound = Q3 + 1.5 * IQR
+
+df.loc[df['Income'] > upper_bound, 'Income'] = upper_bound
+df.loc[df['Income'] < upper_bound, 'Income'] = lower_bound
+```
+
+## Data Transformation
+## Normalizing: 0 ≤ x ≤ 1
+## Standardizing: mean=0, sd=1
+## Before encoding
+## Encoding: M->0, F->1
+## After encoding
