@@ -1,0 +1,20 @@
+---
+title: 'Data Analysis'
+Author : 'Monika Kristina'
+Institute : 'Tunghai University'
+number-sections: true
+toc: true
+format: html
+---
+
+## Key Points
+
+- Data loading
+- Data Inspection
+  - Structure
+  - Value
+- Data cleaning
+  - Dealing with missing data
+  - Decint outliers
+- Data Transformation
+  - Encoding 
