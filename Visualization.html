@@ -3084,10 +3084,35 @@ vertical-align: -.125em;
 
 </head>
 
-<body class="fullcontent">
+<body>
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#data-loading" id="toc-data-loading" class="nav-link active" data-scroll-target="#data-loading">Data Loading</a></li>
+  <li><a href="#histograph" id="toc-histograph" class="nav-link" data-scroll-target="#histograph">Histograph</a>
+  <ul class="collapse">
+  <li><a href="#single-variable" id="toc-single-variable" class="nav-link" data-scroll-target="#single-variable">Single variable</a></li>
+  <li><a href="#all-variable" id="toc-all-variable" class="nav-link" data-scroll-target="#all-variable">All variable</a></li>
+  </ul></li>
+  <li><a href="#data-loading-1" id="toc-data-loading-1" class="nav-link" data-scroll-target="#data-loading-1">Data Loading</a></li>
+  <li><a href="#line-chart" id="toc-line-chart" class="nav-link" data-scroll-target="#line-chart">Line Chart</a>
+  <ul class="collapse">
+  <li><a href="#one-variable" id="toc-one-variable" class="nav-link" data-scroll-target="#one-variable">One Variable</a></li>
+  <li><a href="#all-variable-1" id="toc-all-variable-1" class="nav-link" data-scroll-target="#all-variable-1">All Variable</a></li>
+  </ul></li>
+  <li><a href="#all-variables-log-scale-for-y-axis" id="toc-all-variables-log-scale-for-y-axis" class="nav-link" data-scroll-target="#all-variables-log-scale-for-y-axis">All Variables, log scale for y axis</a></li>
+  <li><a href="#scatter-plot" id="toc-scatter-plot" class="nav-link" data-scroll-target="#scatter-plot">Scatter plot</a>
+  <ul class="collapse">
+  <li><a href="#two-variables" id="toc-two-variables" class="nav-link" data-scroll-target="#two-variables">Two variables</a></li>
+  <li><a href="#all-variables" id="toc-all-variables" class="nav-link" data-scroll-target="#all-variables">All Variables</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -3111,7 +3136,7 @@ vertical-align: -.125em;
 
 <section id="data-loading" class="level2">
 <h2 class="anchored" data-anchor-id="data-loading">Data Loading</h2>
-<div id="61a58589" class="cell" data-execution_count="1">
+<div id="b3137cf0" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">&#39;smoker.csv&#39;</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -3207,7 +3232,7 @@ vertical-align: -.125em;
 <h2 class="anchored" data-anchor-id="histograph">Histograph</h2>
 <section id="single-variable" class="level3">
 <h3 class="anchored" data-anchor-id="single-variable">Single variable</h3>
-<div id="074e5504" class="cell" data-execution_count="2">
+<div id="c5ac9a63" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&#39;smoker&#39;</span>].hist()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -3220,7 +3245,7 @@ vertical-align: -.125em;
 </section>
 <section id="all-variable" class="level3">
 <h3 class="anchored" data-anchor-id="all-variable">All variable</h3>
-<div id="a3bf8bff" class="cell" data-execution_count="3">
+<div id="55c4a8c0" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df.hist()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -3234,7 +3259,7 @@ vertical-align: -.125em;
 </section>
 <section id="data-loading-1" class="level2">
 <h2 class="anchored" data-anchor-id="data-loading-1">Data Loading</h2>
-<div id="267b58c8" class="cell" data-execution_count="4">
+<div id="ab8d8f59" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">&#39;customer_data.csv&#39;</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -3334,7 +3359,7 @@ vertical-align: -.125em;
 <h2 class="anchored" data-anchor-id="line-chart">Line Chart</h2>
 <section id="one-variable" class="level3">
 <h3 class="anchored" data-anchor-id="one-variable">One Variable</h3>
-<div id="e4150b7e" class="cell" data-execution_count="5">
+<div id="d374b115" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&#39;Age&#39;</span>].plot()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -3347,7 +3372,7 @@ vertical-align: -.125em;
 </section>
 <section id="all-variable-1" class="level3">
 <h3 class="anchored" data-anchor-id="all-variable-1">All Variable</h3>
-<div id="fbcfd323" class="cell" data-execution_count="6">
+<div id="17f42235" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df.plot()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -3361,7 +3386,7 @@ vertical-align: -.125em;
 </section>
 <section id="all-variables-log-scale-for-y-axis" class="level2">
 <h2 class="anchored" data-anchor-id="all-variables-log-scale-for-y-axis">All Variables, log scale for y axis</h2>
-<div id="a0ac97b2" class="cell" data-execution_count="7">
+<div id="06c3d499" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df.plot(logy <span class="op">=</span> <span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -3378,7 +3403,7 @@ vertical-align: -.125em;
 <h3 class="anchored" data-anchor-id="two-variables">Two variables</h3>
 <section id="method-1" class="level4">
 <h4 class="anchored" data-anchor-id="method-1">Method 1</h4>
-<div id="67a0e1da" class="cell" data-execution_count="8">
+<div id="6fd34e68" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df.plot(kind<span class="op">=</span><span class="st">&#39;scatter&#39;</span>, x <span class="op">=</span> <span class="st">&#39;Income&#39;</span>, y <span class="op">=</span> <span class="st">&#39;Age&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -3391,7 +3416,7 @@ vertical-align: -.125em;
 </section>
 <section id="method-2" class="level4">
 <h4 class="anchored" data-anchor-id="method-2">Method 2</h4>
-<div id="b2d5a9fa" class="cell" data-execution_count="9">
+<div id="909fb032" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df.plot.scatter(x <span class="op">=</span> <span class="st">&#39;Income&#39;</span>, y <span class="op">=</span> <span class="st">&#39;Age&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -3407,7 +3432,7 @@ vertical-align: -.125em;
 <h3 class="anchored" data-anchor-id="all-variables">All Variables</h3>
 <section id="dataset" class="level4">
 <h4 class="anchored" data-anchor-id="dataset">Dataset</h4>
-<div id="5f244d07" class="cell" data-execution_count="10">
+<div id="e64862e1" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> sns.load_dataset(<span class="st">&quot;iris&quot;</span>) </span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -3522,7 +3547,7 @@ vertical-align: -.125em;
 </div>
 </div>
 </div>
-<div id="1d12b6f7" class="cell" data-execution_count="11">
+<div id="70f469a8" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>sns.pairplot(df, hue <span class="op">=</span> <span class="st">&#39;species&#39;</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
